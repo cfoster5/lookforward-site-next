@@ -28,12 +28,11 @@ async function getMovie(id: string): Promise<Movie> {
   return res.json();
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
+export async function generateMetadata(props: {
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const { id } = await params;
+  const params = await props.params;
+  const { id } = params;
   const movie = await getMovie(id);
   const imageUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
