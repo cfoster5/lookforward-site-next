@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "8F5TGKNLXU.com.lookforward.app"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all routes"
+          }
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "8F5TGKNLXU.com.lookforward.app"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "8F5TGKNLXU.com.lookforward.app"
+    ]
+  }
+}
