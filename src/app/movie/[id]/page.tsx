@@ -1,42 +1,18 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BackdropSize, PosterSize } from "tmdb-ts";
+import { tmdb } from "@/lib/tmdb";
 
-interface Movie {
-  title: string;
-  overview: string;
-  poster_path: string | null;
-  backdrop_path: string | null;
-  tagline: string | null;
-  release_date: string;
-}
+const getMovie = async (id: string) => tmdb.movies.details(Number(id));
 
-async function getMovie(id: string): Promise<Movie> {
-  const token = process.env.TMDB_ACCESS_TOKEN;
-  if (!token) {
-    throw new Error("TMDB access token not defined");
-  }
-  const res = await fetch(`https://api.themoviedb.org/3/movie/${id}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch movie details");
-  }
-  return res.json();
-}
-
-type Props = {
-  params: Promise<{ id: string }>;
-};
+type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const movie = await getMovie(id);
   const imageUrl = movie.poster_path
-    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+    ? `https://image.tmdb.org/t/p/${PosterSize.ORIGINAL}${movie.poster_path}`
     : undefined;
   return {
     title: movie.title,
@@ -53,7 +29,7 @@ export default async function MoviePage({ params }: Props) {
   const { id } = await params;
   const movie = await getMovie(id);
   const backdropUrl = movie.backdrop_path
-    ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
+    ? `https://image.tmdb.org/t/p/${BackdropSize.ORIGINAL}${movie.backdrop_path}`
     : undefined;
   const year = movie.release_date?.split("-")[0];
 
@@ -71,7 +47,7 @@ export default async function MoviePage({ params }: Props) {
             <div className="h-[50vh] flex-shrink-0 overflow-hidden">
               {movie.poster_path && (
                 <Image
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/${PosterSize.ORIGINAL}${movie.poster_path}`}
                   alt={movie.title}
                   width={200}
                   height={300}
@@ -98,7 +74,6 @@ export default async function MoviePage({ params }: Props) {
                 >
                   Open in LookForward
                 </Link>
-
                 <Link
                   href="https://apps.apple.com/app/lookforward-entertainment/id1492748952"
                   target="_blank"
