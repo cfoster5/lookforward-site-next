@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.1.0...v1.2.0) (2025-04-22)
+
+
+### Features
+
+* add metadata export for iTunes app ID ([70decc4](https://github.com/cfoster5/lookforward-site-next/commit/70decc4278c59fadb9375d27da2e2f4d729a4844))
+
 ## [1.1.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.0.0...v1.1.0) (2025-04-22)
 
 
