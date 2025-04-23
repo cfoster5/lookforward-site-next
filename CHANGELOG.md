@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/cfoster5/lookforward-site-next/compare/v1.4.0...v1.4.1) (2025-04-23)
+
+
+### Bug Fixes
+
+* add additional icon formats for movie and person metadata ([e424903](https://github.com/cfoster5/lookforward-site-next/commit/e424903ea12b6a354a5bc3f225a1438873ee4d0a))
+
 ## [1.4.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.3.0...v1.4.0) (2025-04-23)
 
 
