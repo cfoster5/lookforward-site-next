@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.3.0...v1.4.0) (2025-04-23)
+
+
+### Features
+
+* add icons to metadata generation for movie and person pages ([e87910d](https://github.com/cfoster5/lookforward-site-next/commit/e87910dfc3e737ad57910b7eb343a59dc6b9478d))
+
 ## [1.3.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.2.0...v1.3.0) (2025-04-23)
 
 
