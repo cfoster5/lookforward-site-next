@@ -145,7 +145,7 @@ export default function Home() {
         <h2 className="mb-4 text-3xl font-semibold">Support LookForward</h2>
         <p className="mb-4 text-gray-600 dark:text-gray-400">
           {
-            "This app is built by a single developer and remains ad-free, so please consider a donation if you like what I'm making."
+            "This app is built by a single developer, so please consider a donation if you like what I'm making."
           }
         </p>
         <a
