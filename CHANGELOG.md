@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.2.0...v1.3.0) (2025-04-23)
+
+
+### Features
+
+* add app-ads.txt for Google AdSense configuration ([45238cc](https://github.com/cfoster5/lookforward-site-next/commit/45238cc79bec06067f227c08416f369018841354))
+
 ## [1.2.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.1.0...v1.2.0) (2025-04-22)
 
 
