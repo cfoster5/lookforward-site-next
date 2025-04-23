@@ -17,7 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: movie.title,
     description: movie.overview,
-    icons: { icon: imageUrl },
+    icons: {
+      icon: imageUrl,
+      shortcut: imageUrl,
+      apple: imageUrl,
+    },
     openGraph: {
       title: movie.title,
       description: movie.tagline,
