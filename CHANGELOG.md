@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.4.1...v1.5.0) (2025-04-24)
+
+
+### Features
+
+* implement collection page with metadata generation and links ([a8b37e9](https://github.com/cfoster5/lookforward-site-next/commit/a8b37e90fd551ff293d6120696b403981f6a9757))
+
 ## [1.4.1](https://github.com/cfoster5/lookforward-site-next/compare/v1.4.0...v1.4.1) (2025-04-23)
 
 
