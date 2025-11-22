@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PrivacyPage() {
   return (
-    <section className="px-32 py-16 dark:text-neutral-200">
+    <section className="px-16 sm:px-32 py-16 dark:text-neutral-200">
       <h1 className="mb-6 text-4xl font-bold">Privacy Policy</h1>
       <p className="mb-4">
         {
@@ -14,9 +14,10 @@ export default function PrivacyPage() {
         Information we collect
       </h2>
       <p className="mb-4">
-        {
-          "New LookForward accounts are created with an email address and password. Email addresses are <strong>only</strong> used for logging in, password resets, responding to emails that you initiate, and sending notifications that you request. We don't send promotional emails."
-        }
+        New LookForward accounts are created with an email address and password.
+        Email addresses are <strong>only</strong> used for logging in, password
+        resets, responding to emails that you initiate, and sending
+        notifications that you request. We don't send promotional emails.
       </p>
 
       <h3 className="mt-6 mb-3 text-xl font-semibold">Technical basics</h3>
