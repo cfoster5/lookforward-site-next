@@ -96,42 +96,42 @@ export default function Home() {
         </h2>
         <div className="flex space-x-4 overflow-x-auto pb-4">
           <Image
-            src="/1_Find.png"
+            src="/liquid_glass.png"
             alt="Find tab preview showing movie posters"
             width={300}
             height={600}
             className="flex-shrink-0 rounded-xl shadow-md"
           />
           <Image
-            src="/2_Movie.png"
+            src="/reel_insights.png"
             alt="Movie details preview showing overview and cast"
             width={300}
             height={600}
             className="flex-shrink-0 rounded-xl shadow-md"
           />
           <Image
-            src="/3_MovieMedia.png"
+            src="/media_showcase.png"
             alt="Movie media preview showing trailers and backdrops"
             width={300}
             height={600}
             className="flex-shrink-0 rounded-xl shadow-md"
           />
           <Image
-            src="/4_Countdown.png"
+            src="/coming_soon.png"
             alt="Countdown list preview showing upcoming releases"
             width={300}
             height={600}
             className="flex-shrink-0 rounded-xl shadow-md"
           />
           <Image
-            src="/5_Recents.png"
+            src="/collections.png"
             alt="Recents tab preview showing recently viewed items"
             width={300}
             height={600}
             className="flex-shrink-0 rounded-xl shadow-md"
           />
           <Image
-            src="/6_Ratings.png"
+            src="/powerful_discover.png"
             alt="Ratings and reviews preview for a movie"
             width={300}
             height={600}
