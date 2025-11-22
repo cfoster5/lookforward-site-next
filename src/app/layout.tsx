@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-900`}
       >
         {/* Fixed navbar */}
         <nav className="fixed inset-x-0 top-0 z-50 h-16 bg-white shadow-md dark:bg-neutral-800">
@@ -87,7 +87,7 @@ export default function RootLayout({
           </div>
         </nav>
         {/* Page content offset for navbar */}
-        <main className="pt-16 dark:bg-neutral-900">{children}</main>
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );
