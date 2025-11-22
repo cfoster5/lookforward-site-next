@@ -38,62 +38,8 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* Features Section */}
-      <section
-        id="features"
-        className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
-      >
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Simple Discovery</h3>
-          <p className="text-neutral-600 dark:text-neutral-300">
-            Use the Find tab to browse posters and search titles easily.
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Details</h3>
-          <p className="text-neutral-600 dark:text-neutral-300">
-            Tap on a release to view overview, genres, credits, and trailers.
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Countdown</h3>
-          <p className="text-neutral-600 dark:text-neutral-300">
-            Track upcoming movies and games on your personal list with release
-            dates.
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Notifications</h3>
-          <p className="text-neutral-600 dark:text-gray-300">
-            Enable optional push alerts so you never miss a release.
-          </p>
-        </div>
-      </section>
-
-      {/* Reviews Section */}
-      <section id="reviews" className="mt-16">
-        <h2 className="mb-8 text-center text-3xl font-semibold">
-          What Users Are Saying
-        </h2>
-        <div className="mx-auto max-w-2xl space-y-8">
-          <blockquote className="text-xl text-gray-600 italic dark:text-gray-400">
-            {
-              "“A wonderful app that has helped me keep track of all the games I'm interested in this fall! Plus, gotta love the Dark Mode integration!”"
-            }
-          </blockquote>
-          <blockquote className="text-xl text-gray-600 italic dark:text-gray-400">
-            {
-              "“This is a super convenient way for me to keep track of movies/games coming out soon that I'm interested in. I'm often googling release dates for things to loosely follow them and know how long until they come out but with this I can just keep everything I want to follow in one list.”"
-            }
-          </blockquote>
-        </div>
-      </section>
-
       {/* Screenshots Section */}
-      <section id="screenshots" className="mt-16">
-        <h2 className="mb-8 text-center text-3xl font-semibold">
-          App Previews
-        </h2>
+      <section id="screenshots" className="mt-8">
         <div className="flex space-x-4 overflow-x-auto pb-4">
           <Image
             src="/liquid_glass.png"
@@ -140,8 +86,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features Section */}
+      {/* <section
+        id="features"
+        className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+      >
+        <div className="text-center">
+          <h3 className="mb-2 text-xl font-semibold">Simple Discovery</h3>
+          <p className="text-neutral-600 dark:text-neutral-300">
+            Use the Find tab to browse posters and search titles easily.
+          </p>
+        </div>
+        <div className="text-center">
+          <h3 className="mb-2 text-xl font-semibold">Details</h3>
+          <p className="text-neutral-600 dark:text-neutral-300">
+            Tap on a release to view overview, genres, credits, and trailers.
+          </p>
+        </div>
+        <div className="text-center">
+          <h3 className="mb-2 text-xl font-semibold">Countdown</h3>
+          <p className="text-neutral-600 dark:text-neutral-300">
+            Track upcoming movies and games on your personal list with release
+            dates.
+          </p>
+        </div>
+        <div className="text-center">
+          <h3 className="mb-2 text-xl font-semibold">Notifications</h3>
+          <p className="text-neutral-600 dark:text-gray-300">
+            Enable optional push alerts so you never miss a release.
+          </p>
+        </div>
+      </section> */}
+
+      {/* Reviews Section */}
+      <section id="reviews" className="mt-8">
+        <h2 className="mb-4 text-center text-3xl font-semibold">
+          What Users Are Saying
+        </h2>
+        <div className="mx-auto max-w-2xl space-y-8">
+          <blockquote className="text-xl text-gray-600 italic dark:text-gray-400">
+            {
+              "“A wonderful app that has helped me keep track of all the games I'm interested in this fall! Plus, gotta love the Dark Mode integration!”"
+            }
+          </blockquote>
+          <blockquote className="text-xl text-gray-600 italic dark:text-gray-400">
+            {
+              "“This is a super convenient way for me to keep track of movies/games coming out soon that I'm interested in. I'm often googling release dates for things to loosely follow them and know how long until they come out but with this I can just keep everything I want to follow in one list.”"
+            }
+          </blockquote>
+        </div>
+      </section>
+
       {/* Support Section */}
-      <section id="support" className="mt-16 text-center">
+      <section id="support" className="mt-8 text-center">
         <h2 className="mb-4 text-3xl font-semibold">Support LookForward</h2>
         <p className="mb-4 text-gray-600 dark:text-gray-400">
           {
