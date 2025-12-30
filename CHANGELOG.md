@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.6.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.5.0...v1.6.0) (2025-12-30)
+
+
+### Features
+
+* remove Features section and move app previews higher in layout ([c5bc349](https://github.com/cfoster5/lookforward-site-next/commit/c5bc349661a1ed75e6d63abdcc495cc32e733ccf))
+* update app previews ([6465249](https://github.com/cfoster5/lookforward-site-next/commit/6465249b85c8bcf5e17e15862a62631a9e062312))
+
+
+### Bug Fixes
+
+* adjust background color classes for improved dark mode support ([e8ce6af](https://github.com/cfoster5/lookforward-site-next/commit/e8ce6af3d911d933f3fd19ffce86ee0cec3458e5))
+* adjust padding and formatting in Privacy Policy section ([dbfec9f](https://github.com/cfoster5/lookforward-site-next/commit/dbfec9f6484cc994f3810de8d73ef4c9b15e5191))
+* adjust padding in Privacy Policy section ([97e7ebb](https://github.com/cfoster5/lookforward-site-next/commit/97e7ebb88d25d1c11174c9f51b73f5920c68a7a1))
+
 ## [1.5.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.4.1...v1.5.0) (2025-04-24)
 
 
