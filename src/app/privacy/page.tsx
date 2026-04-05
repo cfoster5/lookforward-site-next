@@ -1,16 +1,45 @@
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Privacy policy for LookForward, the movie and video game release tracker app for iOS and Android.",
+  alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: "Privacy Policy · LookForward",
+    description:
+      "Privacy policy for LookForward, the movie and video game release tracker app for iOS and Android.",
+    url: "/privacy",
+    type: "article",
+  },
+};
 
 export default function PrivacyPage() {
   return (
-    <section className="px-8 sm:px-32 py-16 dark:text-neutral-200">
-      <h1 className="mb-6 text-4xl font-bold">Privacy Policy</h1>
+    <section className="bg-apple-gray text-apple-near-black py-24">
+      <div
+        className="mx-auto max-w-[820px] px-6 sm:px-8"
+        style={{
+          fontSize: "17px",
+          lineHeight: 1.47,
+          letterSpacing: "-0.374px",
+          color: "rgba(0, 0, 0, 0.8)",
+        }}
+      >
+      <h1
+        className="mb-6 font-semibold text-apple-near-black"
+        style={{ fontSize: "clamp(1.75rem, 5vw, 2.5rem)", lineHeight: 1.1 }}
+      >
+        Privacy Policy
+      </h1>
       <p className="mb-4">
         {
           "This policy applies to all information collected or submitted on LookForward's apps for iOS and Android devices."
         }
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         Information we collect
       </h2>
       <p className="mb-4">
@@ -20,7 +49,7 @@ export default function PrivacyPage() {
         notifications that you request. We don't send promotional emails.
       </p>
 
-      <h3 className="mt-6 mb-3 text-xl font-semibold">Technical basics</h3>
+      <h3 className="mt-8 mb-3 font-semibold text-apple-near-black" style={{ fontSize: "21px", lineHeight: 1.19 }}>Technical basics</h3>
       <p className="mb-2">
         If you enable notifications, we must store a token to send them. We{" "}
         <strong>never</strong> use notifications for marketing.
@@ -31,7 +60,7 @@ export default function PrivacyPage() {
       </p>
       <p className="mb-4">We use tokens in the app to keep you logged in.</p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">Information usage</h2>
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>Information usage</h2>
       <p className="mb-4">
         We use the information we collect to operate and improve our app.
       </p>
@@ -53,13 +82,13 @@ export default function PrivacyPage() {
         transferred assets.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">Security</h2>
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>Security</h2>
       <p className="mb-4">
         We implement a variety of security measures to help keep your
         information secure. Passwords are{" "}
         <a
           href="http://en.wikipedia.org/wiki/Cryptographic_hash_function"
-          className="text-indigo-700 hover:underline"
+          className="text-apple-link hover:underline"
         >
           hashed
         </a>
@@ -67,14 +96,14 @@ export default function PrivacyPage() {
         version of{" "}
         <a
           href="https://en.wikipedia.org/wiki/Scrypt"
-          className="text-indigo-700 hover:underline"
+          className="text-apple-link hover:underline"
         >
           scrypt
         </a>
         ).
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         Accessing, changing, or deleting information
       </h2>
       <p className="mb-4">
@@ -87,7 +116,7 @@ export default function PrivacyPage() {
         idle accounts, data loss, or any other reason.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         Third-party links and content
       </h2>
       <p className="mb-4">
@@ -96,7 +125,7 @@ export default function PrivacyPage() {
         liability for their content or activities.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         California Online Privacy Protection Act Compliance
       </h2>
       <p className="mb-4">
@@ -105,7 +134,7 @@ export default function PrivacyPage() {
         parties without your consent.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         {"Children's Online Privacy Protection Act Compliance"}
       </h2>
       <p className="mb-4">
@@ -114,7 +143,7 @@ export default function PrivacyPage() {
         attract anyone under 13.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         Information for European Union Customers
       </h2>
       <p className="mb-4">
@@ -122,7 +151,7 @@ export default function PrivacyPage() {
         collect, use, and store your information outside of the European Union.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         International Transfers of Information
       </h2>
       <p className="mb-4">
@@ -132,12 +161,12 @@ export default function PrivacyPage() {
         processed, stored, or used.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">Your Consent</h2>
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>Your Consent</h2>
       <p className="mb-4">
         By using our app, you consent to our privacy policy.
       </p>
 
-      <h2 className="mt-8 mb-4 text-2xl font-semibold">
+      <h2 className="mt-12 mb-4 font-semibold text-apple-near-black" style={{ fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)", lineHeight: 1.14 }}>
         Changes to this policy
       </h2>
       <p className="mb-4">
@@ -153,6 +182,7 @@ export default function PrivacyPage() {
           account.
         </li>
       </ul>
+      </div>
     </section>
   );
 }

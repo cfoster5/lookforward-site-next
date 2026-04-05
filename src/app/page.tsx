@@ -2,156 +2,246 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+const description =
+  "Your Ultimate Movie & Game Release Tracker. Never miss a release again. LookForward helps you track upcoming movies and video games, so you always know what's next.";
+
 export const metadata: Metadata = {
+  title: "LookForward — Movie & Video Game Release Tracker for iOS",
+  description,
+  alternates: { canonical: "/" },
   itunes: { appId: "1492748952" },
+  openGraph: {
+    type: "website",
+    title: "LookForward — Movie & Video Game Release Tracker for iOS",
+    description,
+    url: "/",
+    images: [
+      {
+        url: "/app-icon.png",
+        width: 1024,
+        height: 1024,
+        alt: "LookForward app icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LookForward — Movie & Video Game Release Tracker for iOS",
+    description,
+    images: ["/app-icon.png"],
+  },
+};
+
+const appJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  name: "LookForward",
+  operatingSystem: "iOS",
+  applicationCategory: "EntertainmentApplication",
+  description,
+  url: "https://apps.apple.com/us/app/lookforward-entertainment/id1492748952",
+  installUrl:
+    "https://apps.apple.com/us/app/lookforward-entertainment/id1492748952",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  author: {
+    "@type": "Person",
+    name: "Corey Foster",
+  },
 };
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 dark:text-neutral-200">
-      {/* Hero Section */}
-      <section className="mx-auto max-w-2xl text-center">
-        <Image
-          src="/app-icon.png"
-          alt="LookForward App Icon"
-          width={120}
-          height={120}
-          className="mx-auto"
-        />
-        <h1 className="mt-6 text-5xl font-bold">LookForward</h1>
-        <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-300">
-          {
-            "Your Ultimate Movie & Game Release Tracker! Never miss a release again. LookForward helps you track upcoming movies and video games, so you always know what's next."
-          }
-        </p>
-        <Link
-          href="https://apps.apple.com/us/app/lookforward-entertainment/id1492748952?itscg=30200&itsct=apps_box_badge&mttnsubad=1492748952"
-          className="mt-8 inline-block px-6 py-3"
-        >
+    <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
+      {/* Hero — black */}
+      <section className="bg-apple-black py-24 text-white">
+        <div className="mx-auto max-w-[980px] px-6 text-center">
           <Image
-            src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1580860800"
-            alt="Download on the App Store"
-            width={245}
-            height={82}
-            className="object-contain align-middle"
+            src="/app-icon.png"
+            alt="LookForward App Icon"
+            width={120}
+            height={120}
+            className="mx-auto"
           />
-        </Link>
-      </section>
-
-      {/* Screenshots Section */}
-      <section id="screenshots" className="mt-8">
-        <div className="flex space-x-4 overflow-x-auto pb-4">
-          <Image
-            src="/liquid_glass.png"
-            alt="Find tab preview showing movie posters"
-            width={300}
-            height={600}
-            className="flex-shrink-0 rounded-xl shadow-md"
-          />
-          <Image
-            src="/reel_insights.png"
-            alt="Movie details preview showing overview and cast"
-            width={300}
-            height={600}
-            className="flex-shrink-0 rounded-xl shadow-md"
-          />
-          <Image
-            src="/media_showcase.png"
-            alt="Movie media preview showing trailers and backdrops"
-            width={300}
-            height={600}
-            className="flex-shrink-0 rounded-xl shadow-md"
-          />
-          <Image
-            src="/coming_soon.png"
-            alt="Countdown list preview showing upcoming releases"
-            width={300}
-            height={600}
-            className="flex-shrink-0 rounded-xl shadow-md"
-          />
-          <Image
-            src="/collections.png"
-            alt="Recents tab preview showing recently viewed items"
-            width={300}
-            height={600}
-            className="flex-shrink-0 rounded-xl shadow-md"
-          />
-          <Image
-            src="/powerful_discover.png"
-            alt="Ratings and reviews preview for a movie"
-            width={300}
-            height={600}
-            className="flex-shrink-0 rounded-lg shadow-md"
-          />
+          <h1
+            className="mt-6 font-semibold"
+            style={{
+              fontSize: "clamp(2rem, 7vw, 3.5rem)",
+              lineHeight: 1.07,
+              letterSpacing: "-0.28px",
+            }}
+          >
+            LookForward
+          </h1>
+          <p
+            className="mx-auto mt-4 max-w-xl text-white/80"
+            style={{
+              fontSize: "clamp(1.125rem, 2.5vw, 1.3125rem)",
+              lineHeight: 1.19,
+              fontWeight: 400,
+            }}
+          >
+            {
+              "Your Ultimate Movie & Game Release Tracker! Never miss a release again. LookForward helps you track upcoming movies and video games, so you always know what's next."
+            }
+          </p>
+          <Link
+            href="https://apps.apple.com/us/app/lookforward-entertainment/id1492748952?itscg=30200&itsct=apps_box_badge&mttnsubad=1492748952"
+            className="mt-8 inline-block"
+          >
+            <Image
+              src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1580860800"
+              alt="Download on the App Store"
+              width={245}
+              height={82}
+              className="object-contain align-middle"
+            />
+          </Link>
         </div>
       </section>
 
-      {/* Features Section */}
-      {/* <section
-        id="features"
-        className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+      {/* Screenshots — light gray, full-bleed scroll strip */}
+      <section
+        id="screenshots"
+        className="bg-apple-gray text-apple-near-black py-20"
       >
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Simple Discovery</h3>
-          <p className="text-neutral-600 dark:text-neutral-300">
-            Use the Find tab to browse posters and search titles easily.
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Details</h3>
-          <p className="text-neutral-600 dark:text-neutral-300">
-            Tap on a release to view overview, genres, credits, and trailers.
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Countdown</h3>
-          <p className="text-neutral-600 dark:text-neutral-300">
-            Track upcoming movies and games on your personal list with release
-            dates.
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-xl font-semibold">Notifications</h3>
-          <p className="text-neutral-600 dark:text-gray-300">
-            Enable optional push alerts so you never miss a release.
-          </p>
-        </div>
-      </section> */}
-
-      {/* Reviews Section */}
-      <section id="reviews" className="mt-8">
-        <h2 className="mb-4 text-center text-3xl font-semibold">
-          What Users Are Saying
-        </h2>
-        <div className="mx-auto max-w-2xl space-y-8">
-          <blockquote className="text-xl text-gray-600 italic dark:text-gray-400">
-            {
-              "“A wonderful app that has helped me keep track of all the games I'm interested in this fall! Plus, gotta love the Dark Mode integration!”"
-            }
-          </blockquote>
-          <blockquote className="text-xl text-gray-600 italic dark:text-gray-400">
-            {
-              "“This is a super convenient way for me to keep track of movies/games coming out soon that I'm interested in. I'm often googling release dates for things to loosely follow them and know how long until they come out but with this I can just keep everything I want to follow in one list.”"
-            }
-          </blockquote>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section id="support" className="mt-8 text-center">
-        <h2 className="mb-4 text-3xl font-semibold">Support LookForward</h2>
-        <p className="mb-4 text-gray-600 dark:text-gray-400">
-          {
-            "This app is built by a single developer, so please consider a donation if you like what I'm making."
-          }
-        </p>
-        <a
-          href="/support"
-          className="inline-block rounded-full bg-indigo-700 px-6 py-3 text-white transition hover:bg-indigo-600"
+        <div
+          className="no-scrollbar flex gap-6 overflow-x-auto px-6 pb-6 sm:px-12 lg:px-24"
+          style={{
+            scrollSnapType: "x mandatory",
+            scrollPaddingLeft: "1.5rem",
+          }}
         >
-          Support Me on Ko-fi
-        </a>
+          {[
+            {
+              src: "/liquid_glass.png",
+              alt: "Find tab preview showing movie posters",
+            },
+            {
+              src: "/reel_insights.png",
+              alt: "Movie details preview showing overview and cast",
+            },
+            {
+              src: "/media_showcase.png",
+              alt: "Movie media preview showing trailers and backdrops",
+            },
+            {
+              src: "/coming_soon.png",
+              alt: "Countdown list preview showing upcoming releases",
+            },
+            {
+              src: "/collections.png",
+              alt: "Recents tab preview showing recently viewed items",
+            },
+            {
+              src: "/powerful_discover.png",
+              alt: "Ratings and reviews preview for a movie",
+            },
+          ].map(({ src, alt }) => (
+            <Image
+              key={src}
+              src={src}
+              alt={alt}
+              width={300}
+              height={600}
+              className="flex-shrink-0 rounded-xl"
+              style={{
+                boxShadow: "3px 5px 30px 0px rgba(0, 0, 0, 0.22)",
+                scrollSnapAlign: "center",
+              }}
+            />
+          ))}
+        </div>
       </section>
-    </main>
+
+      {/* Reviews — black */}
+      <section id="reviews" className="bg-apple-black py-24 text-white">
+        <div className="mx-auto max-w-[980px] px-6">
+          <h2
+            className="mb-12 text-center font-semibold"
+            style={{
+              fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
+              lineHeight: 1.1,
+            }}
+          >
+            What Users Are Saying
+          </h2>
+          <div className="mx-auto max-w-2xl space-y-12">
+            <blockquote
+              className="text-white/80"
+              style={{
+                fontSize: "clamp(1.25rem, 3.5vw, 1.75rem)",
+                lineHeight: 1.14,
+                letterSpacing: "0.196px",
+                fontWeight: 400,
+              }}
+            >
+              {
+                "“A wonderful app that has helped me keep track of all the games I'm interested in this fall! Plus, gotta love the Dark Mode integration!”"
+              }
+            </blockquote>
+            <blockquote
+              className="text-white/80"
+              style={{
+                fontSize: "clamp(1.25rem, 3.5vw, 1.75rem)",
+                lineHeight: 1.14,
+                letterSpacing: "0.196px",
+                fontWeight: 400,
+              }}
+            >
+              {
+                "“This is a super convenient way for me to keep track of movies/games coming out soon that I'm interested in. I'm often googling release dates for things to loosely follow them and know how long until they come out but with this I can just keep everything I want to follow in one list.”"
+              }
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Support — light gray */}
+      <section
+        id="support"
+        className="bg-apple-gray text-apple-near-black py-24"
+      >
+        <div className="mx-auto max-w-[980px] px-6 text-center">
+          <h2
+            className="font-semibold"
+            style={{
+              fontSize: "clamp(1.75rem, 5vw, 2.5rem)",
+              lineHeight: 1.1,
+            }}
+          >
+            Support LookForward
+          </h2>
+          <p
+            className="mx-auto mt-4 max-w-xl"
+            style={{
+              fontSize: "17px",
+              lineHeight: 1.47,
+              letterSpacing: "-0.374px",
+              color: "rgba(0, 0, 0, 0.8)",
+            }}
+          >
+            {
+              "This app is built by a single developer, so please consider a donation if you like what I'm making."
+            }
+          </p>
+          <a
+            href="https://ko-fi.com/cfoster5"
+            className="bg-apple-blue hover:bg-apple-blue-hover mt-8 inline-block rounded-pill px-6 py-3 font-normal text-white transition"
+            style={{ fontSize: "17px" }}
+          >
+            Support Me on Ko-fi
+          </a>
+        </div>
+      </section>
+    </>
   );
 }
