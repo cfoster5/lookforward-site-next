@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "./Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.getlookforward.app";
@@ -90,6 +91,7 @@ export default function RootLayout({
         <Navbar />
         {/* Page content offset for 48px navbar */}
         <main className="pt-12">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
