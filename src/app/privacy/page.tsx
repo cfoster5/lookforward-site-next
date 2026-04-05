@@ -48,9 +48,10 @@ export default function PrivacyPage() {
         >
           Information we collect
         </h2>
+        {/* prettier-ignore */}
         <p className="mb-4">
           New LookForward accounts are created with an email address and
-          password. Email addresses are <strong>only</strong> used for logging
+          password. Email addresses are <strong>only</strong>{" "}used for logging
           in, password resets, responding to emails that you initiate, and
           sending notifications that you request. We don&apos;t send promotional
           emails.
