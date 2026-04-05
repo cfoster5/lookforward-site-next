@@ -5,6 +5,10 @@ import { BackdropSize, PosterSize } from "tmdb-ts";
 import { tmdb } from "@/lib/tmdb";
 
 const getMovie = async (id: string) => tmdb.movies.details(Number(id));
+const getCredits = async (id: string) => tmdb.movies.credits(Number(id));
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.getlookforward.app";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -32,14 +36,52 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function MoviePage({ params }: Props) {
   const { id } = await params;
-  const movie = await getMovie(id);
+  // Fetch details and credits in parallel to avoid a waterfall.
+  const [movie, credits] = await Promise.all([getMovie(id), getCredits(id)]);
   const backdropUrl = movie.backdrop_path
     ? `https://image.tmdb.org/t/p/${BackdropSize.ORIGINAL}${movie.backdrop_path}`
     : undefined;
   const year = movie.release_date?.split("-")[0];
 
+  const posterUrl = movie.poster_path
+    ? `https://image.tmdb.org/t/p/${PosterSize.ORIGINAL}${movie.poster_path}`
+    : undefined;
+  const directors = credits.crew
+    .filter((c) => c.job === "Director")
+    .map((c) => ({ "@type": "Person" as const, name: c.name }));
+  const actors = credits.cast.slice(0, 8).map((c) => ({
+    "@type": "Person" as const,
+    name: c.name,
+  }));
+  const movieJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    name: movie.title,
+    description: movie.overview || undefined,
+    url: `${siteUrl}/movie/${id}`,
+    image: posterUrl,
+    datePublished: movie.release_date || undefined,
+    genre: movie.genres?.map((g) => g.name),
+    director: directors.length > 0 ? directors : undefined,
+    actor: actors.length > 0 ? actors : undefined,
+    aggregateRating:
+      movie.vote_count > 0
+        ? {
+            "@type": "AggregateRating",
+            ratingValue: movie.vote_average,
+            ratingCount: movie.vote_count,
+            bestRating: 10,
+            worstRating: 0,
+          }
+        : undefined,
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(movieJsonLd) }}
+      />
       <div
         className="fixed top-0 left-0 h-screen w-full bg-cover bg-center brightness-30"
         style={{
