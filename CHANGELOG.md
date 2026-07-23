@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.6.0...v1.7.0) (2026-07-23)
+
+
+### Features
+
+* disclose service providers and analytics use of email in privacy policy ([#13](https://github.com/cfoster5/lookforward-site-next/issues/13)) ([e676aa1](https://github.com/cfoster5/lookforward-site-next/commit/e676aa198992d465b0a5818cc7d1cd9c685caf37))
+
 ## [1.6.0](https://github.com/cfoster5/lookforward-site-next/compare/v1.5.0...v1.6.0) (2026-04-05)
 
 
