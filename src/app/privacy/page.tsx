@@ -48,12 +48,14 @@ export default function PrivacyPage() {
         >
           Information we collect
         </h2>
-        {/* prettier-ignore */}
         <p className="mb-4">
           New LookForward accounts are created with an email address and
-          password. Email addresses are <strong>only</strong>{" "}used for logging
-          in, password resets, responding to emails that you initiate, and
-          sending notifications that you request. We don&apos;t send promotional
+          password. Email addresses are used for logging in, password resets,
+          responding to emails that you initiate, and sending notifications that
+          you request. We also share your email address with the service
+          providers listed below to operate the app — for example, to manage
+          your subscription — and use it in our analytics to understand how the
+          app is used so we can improve it. We don&apos;t send promotional
           emails.
         </p>
 
@@ -102,6 +104,61 @@ export default function PrivacyPage() {
           businesses. In such transactions, user information may be among the
           transferred assets.
         </p>
+
+        <h2
+          className="mt-12 mb-4 font-semibold text-apple-near-black"
+          style={{
+            fontSize: "clamp(1.375rem, 3.5vw, 1.75rem)",
+            lineHeight: 1.14,
+          }}
+        >
+          Service providers
+        </h2>
+        <p className="mb-4">
+          We rely on a small number of third-party service providers to operate
+          LookForward. They process your information on our behalf, and each has
+          its own privacy policy:
+        </p>
+        <ul className="mb-4 list-inside list-disc">
+          <li className="mb-2">
+            <strong>Firebase (Google)</strong> provides authentication and our
+            database. It stores your email address, hashed password, and the
+            data you save in the app, such as your countdown list. See the{" "}
+            <a
+              href="https://firebase.google.com/support/privacy"
+              className="text-apple-link hover:underline"
+            >
+              Firebase privacy documentation
+            </a>
+            .
+          </li>
+          <li className="mb-2">
+            <strong>PostHog</strong> provides product analytics and session
+            replay. We use analytics to understand how the app is used and
+            session replay to see how our screens behave; replays may include
+            the content of screens you view in the app. Analytics data may be
+            associated with your account, including your email address. See the{" "}
+            <a
+              href="https://posthog.com/privacy"
+              className="text-apple-link hover:underline"
+            >
+              PostHog privacy policy
+            </a>
+            .
+          </li>
+          <li className="mb-2">
+            <strong>RevenueCat</strong> manages subscriptions and purchases. It
+            receives your email address and purchase information so we can
+            support your subscription. See the{" "}
+            <a
+              href="https://www.revenuecat.com/privacy"
+              className="text-apple-link hover:underline"
+            >
+              RevenueCat privacy policy
+            </a>
+            .
+          </li>
+        </ul>
 
         <h2
           className="mt-12 mb-4 font-semibold text-apple-near-black"
@@ -260,6 +317,11 @@ export default function PrivacyPage() {
           <li>
             <strong>December 11, 2022:</strong> Added provision for user to
             delete account.
+          </li>
+          <li>
+            <strong>July 23, 2026:</strong> Disclosed our service providers
+            (Firebase, PostHog, RevenueCat) and expanded how email addresses are
+            used to include service operation and analytics.
           </li>
         </ul>
       </div>
